@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Niharika 🎉</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #ffdde1, #ee9ca7);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    perspective: 1000px;
+    color: white;
+}
+
+/* --- NEW CSS FOR 3D BACKGROUND --- */
+.background-3d {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+}
+
+/* Starfield */
+.starfield {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: transparent;
+    overflow: hidden;
+}
+.star {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    animation: twinkle 5s infinite ease-in-out;
+}
+@keyframes twinkle {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+}
+
+/* Floating Particles */
+.particles {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: transparent;
+}
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+    animation: particle-float 15s infinite ease-in-out;
+}
+@keyframes particle-float {
+    0% { transform: translate3d(0, 0, 0); opacity: 0.5; }
+    50% { transform: translate3d(50vw, -50vh, 100px); opacity: 1; }
+    100% { transform: translate3d(0, -100vh, 0); opacity: 0; }
+}
+
+/* Celebration Overlay */
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+}
+.overlay h1 {
+    font-size: 2.5em;
+}
+.overlay button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    background: #ff4b5c;
+    color: rgb(15, 0, 0);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+.overlay button:hover {
+    transform: scale(1.1);
+}
+
+/* Scene for images */
+.scene {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    animation: rotateCarousel 20s linear infinite;
+}
+@keyframes rotateCarousel {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* Orbiting Images */
+.scene img {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: transform 0.9s;
+}
+.scene img:hover {
+    transform: scale(1.5);
+    z-index: 20;
+}
+
+/* Center Greeting - does NOT rotate */
+.center-text {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 0 0 15px rgba(255,255,255,0.8), 0 0 25px #ff6ec7;
+}
+
+/* Quotes under text */
+.quotes {
+    font-style: italic;
+    font-size: 0.9em;
+    max-width: 250px;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="background-3d">
+    <div class="starfield" id="starfield"></div>
+    <div class="particles" id="particles"></div>
+</div>
+
+<div class="overlay" id="startOverlay">
+    <h1>🎉 Happy Birthday Niharika 🎂</h1>
+    <p>Click below to start the celebration!</p>
+    <button onclick="startCelebration()">🎵 Start</button>
+</div>
+
+<div class="center-text">
+    🎉 Happy Birthday Niharika 🎂<br><br>
+    <div class="quotes">
+        "Count your life by smiles, not tears."
+            "Today is all about you — shine bright!"<br><br>
+            Wishing you a birthday as special as your soul, my friend!<br>
+            May you always be surrounded by people who love you and moments that make life beautiful
+    </div>
+</div>
+
+<div class="scene">
+    <img src="c:\Users\user\Downloads\WhatsApp Image 2025-08-12 at 10.42.52 PM (1).jpeg" style="transform: rotateY(0deg) translateZ(200px);">
+    <img src="c:\Users\user\Downloads\WhatsApp Image 2025-08-12 at 10.42.52 PM.jpeg" style="transform: rotateY(60deg) translateZ(200px);">
+    <img src="c:\Users\user\Downloads\WhatsApp Image 2025-08-12 at 10.46.46 PM.jpeg" style="transform: rotateY(120deg) translateZ(200px);">
+    <img src="c:\Users\user\Downloads\WhatsApp Image 2025-08-12 at 10.46.46 PM (1).jpeg" style="transform: rotateY(180deg) translateZ(200px);">
+    <img src="c:\Users\user\Downloads\WhatsApp Image 2025-08-12 at 10.46.46 PM (2).jpeg" style="transform: rotateY(240deg) translateZ(200px);">
+    <img src="c:\Users\user\Downloads\WhatsApp Image 2025-08-12 at 10.46.47 PM.jpeg" style="transform: rotateY(300deg) translateZ(200px);">
+</div>
+
+<audio id="birthdaySong" src="c:\Users\user\Downloads\happy-birthday-254480.mp3" loop></audio>
+
+<script>
+function startCelebration() {
+    document.getElementById('startOverlay').style.display = 'none';
+    let music = document.getElementById("birthdaySong");
+    music.volume = 0.5;
+    music.play().catch(err => console.log("Autoplay blocked:", err));
+
+    // --- NEW JAVASCRIPT FOR 3D BACKGROUND ---
+    function createStars() {
+        const starfield = document.getElementById('starfield');
+        const starCount = 100;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.width = `${Math.random() * 3 + 1}px`;
+            star.style.height = star.style.width;
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            starfield.appendChild(star);
+        }
+    }
+    createStars();
+    
+    function createParticles() {
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 20;
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            const size = Math.random() * 50 + 20;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.top = `${Math.random() * 100}vh`;
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.animationDelay = `${Math.random() * 10}s`;
+            particle.style.animationDuration = `${10 + Math.random() * 10}s`;
+            particlesContainer.appendChild(particle);
+        }
+    }
+    createParticles();
+}
+</script>
+
+</body>
+</html>
